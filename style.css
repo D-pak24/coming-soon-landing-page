@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+.main {
+  background: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%) 0%,
+    hsl(0, 100%, 98%) 100%
+  );
+  height: 100vh;
+  width: 100vw;
+}
+.logo {
+  margin: 1.5em;
+}
+.logo img {
+  width: 120px;
+}
+.content {
+  margin: 0;
+  max-width: 1020px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.description {
+  color: hsl(0, 36%, 70%);
+  margin-top: 3em;
+  margin-left: 2.5em;
+  text-align: center;
+  width: 80%;
+  height: 100%;
+}
+.logo2 {
+  display: none;
+}
+h1 {
+  transform: translateX(-100%);
+  animation: comeinleft 0.5s ease forwards;
+}
+.header-design {
+  color: hsl(0, 36%, 70%);
+  font-size: 1.1em;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 10px;
+}
+.description .header .black-head {
+  color: #313131;
+  display: block;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 10px;
+}
+.description p {
+  padding-top: 1em;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+  line-height: 1.5em;
+  font-weight: 400;
+  width: 100%;
+  transform: translateX(100%);
+  animation: comeinright 0.5s ease forwards;
+}
+
+.right {
+  width: 100%;
+  height: 15em;
+  background-image: url(images/hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+form {
+  position: relative;
+  margin-top: 2em;
+  width: 100%;
+  transform: translateX(-100%);
+  animation: comeinleft 0.5s ease forwards;
+}
+form input {
+  width: 85%;
+  height: 55%;
+  padding: 15px 20px;
+  border-radius: 20px;
+  border: 1px hsl(0, 36%, 70%) solid;
+}
+form input:focus {
+  box-shadow: -0px 5px 18px -9px rgba(238, 140, 140, 1);
+  outline: none;
+}
+form input::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+.error-img {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 5.9em;
+  z-index: 1;
+}
+small {
+  display: none;
+  color: hsl(0, 93%, 68%);
+  position: absolute;
+  text-align: start;
+  left: 30px;
+  top: 55px;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background: linear-gradient(135deg, #f8bfbf 0%, #ee8c8c 100%);
+  border: none;
+  padding: 11px 35px;
+  border-radius: 20px;
+  -webkit-box-shadow: -12px 7px 18px -9px rgba(238, 140, 140, 1);
+  -moz-box-shadow: -12px 7px 18px -9px rgba(238, 140, 140, 1);
+  box-shadow: -12px 10px 18px -9px rgba(238, 140, 140, 1);
+}
+button:hover {
+  background: linear-gradient(
+    135deg,
+    hsl(0, 74%, 88%) 0%,
+    hsl(0, 50%, 84%) 100%
+  );
+}
+
+form.error small {
+  display: block;
+}
+form.error .error-img {
+  display: block;
+}
+form.error input {
+  border: 1px hsl(0, 93%, 68%) solid;
+}
+/*animation*/
+
+@keyframes comeinleft {
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes comeinright {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/*media query*/
+
+@media only screen and (min-width: 500px) {
+  .submit {
+    width: 100%;
+  }
+  .right {
+    height: 25em;
+  }
+  .main {
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .main {
+    display: flex;
+    flex-direction: row;
+  }
+  .description {
+    text-align: start;
+  }
+  .logo img {
+    display: none;
+  }
+  .logo2 {
+    display: block;
+    width: 130px;
+    padding-bottom: 3em;
+    padding-left: 2.5em;
+    top: 10px;
+  }
+  .header {
+    font-size: 2em;
+  }
+  .left {
+    width: 100%;
+    margin-top: 3em;
+    padding-left: 5%;
+  }
+  .content {
+    flex-direction: row;
+  }
+  .logo {
+    display: inline;
+    margin-left: 5em;
+    width: 200px;
+    margin-right: 0;
+  }
+  .right {
+    display: none;
+  }
+  .desktop {
+    width: 100%;
+    height: 100%;
+    background-image: url(images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+  }
+  form input {
+    width: 88%;
+  }
+}
+@media only screen and (max-width: 330px) {
+  form input {
+    width: 77%;
+  }
+}
