@@ -131,7 +131,22 @@ button:hover {
     hsl(0, 50%, 84%) 100%
   );
 }
-
+.attribution {
+  margin-top: 3em;
+  position: sticky;
+  top: 100%;
+  font-size: 14px;
+  color: #fff;
+  background-color: #ee8c8c;
+  padding: 0.4em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.attribution a {
+  padding: 5px;
+  text-decoration: none;
+}
 form.error small {
   display: block;
 }
