@@ -77,6 +77,7 @@ h1 {
 form {
   position: relative;
   margin-top: 2em;
+  margin-bottom: 5em;
   width: 100%;
   transform: translateX(-100%);
   animation: comeinleft 0.5s ease forwards;
@@ -131,22 +132,7 @@ button:hover {
     hsl(0, 50%, 84%) 100%
   );
 }
-.attribution {
-  margin-top: 3em;
-  position: sticky;
-  top: 100%;
-  font-size: 14px;
-  color: #fff;
-  background-color: #ee8c8c;
-  padding: 0.4em 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.attribution a {
-  padding: 5px;
-  text-decoration: none;
-}
+
 form.error small {
   display: block;
 }
@@ -209,7 +195,7 @@ form.error input {
   .left {
     width: 100%;
     margin-top: 3em;
-    padding-left: 5%;
+    padding-left: 10%;
   }
   .content {
     flex-direction: row;
@@ -231,8 +217,17 @@ form.error input {
     object-fit: cover;
     background-size: cover;
   }
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  #form {
+    padding-bottom: 100px;
+    width: 80%;
+  }
   form input {
-    width: 88%;
+    width: 80%;
   }
 }
 @media only screen and (max-width: 330px) {
