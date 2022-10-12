@@ -236,8 +236,3 @@ form.error input {
     width: 77%;
   }
 }
-@media only screen and (max-width: 500px) {
-  .content {
-    width: 100%;
-  }
-}
